@@ -8,6 +8,12 @@ Flux is a modern style beamer presentation. It is based on simple design pattern
 
 ![alt text](https://github.com/pvanberg/flux-beamer/blob/master/demo.png)
 
+## Themes
+
+Flux provides five differents color palettes. (asphalt, blue, red, green, gray)
+
+![alt text](https://github.com/pvanberg/flux-beamer/blob/master/demo_themes.png)
+
 ## Minimal Working Example
 
 ```
