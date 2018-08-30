@@ -1,0 +1,108 @@
+% Copyright (c) 2018 by P. Vanberg 
+% https://github.com/pvanberg/flux-beamer
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You can find the GNU General Public License at <http://www.gnu.org/licenses/>.
+
+\mode<presentation>
+
+\usepackage{xcolor}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Color palette
+\definecolor{background}{HTML}{fafafa}
+\definecolor{Gray}{HTML}{858b8f}
+\definecolor{text}{HTML}{4F5D66}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Main color
+\DeclareOptionBeamer{style}{\def\beamer@mytheme@style{#1}}
+\ExecuteOptionsBeamer{style=asphalt} %default
+\ProcessOptionsBeamer
+
+\def\beamer@mytheme@stylegreen{green}%
+\def\beamer@mytheme@styleblue{blue}%
+\def\beamer@mytheme@stylered{red}%
+\def\beamer@mytheme@stylegray{gray}%
+
+\ifx\beamer@mytheme@style\beamer@mytheme@stylegreen%
+	% Green
+    \definecolor{primaryLight}{HTML}{77933c}
+    \definecolor{primary}{HTML}{4f622a}
+    \definecolor{secondary}{HTML}{884F4D}
+    \definecolor{tertiary}{HTML}{2B3234}
+	\else\ifx\beamer@mytheme@style\beamer@mytheme@stylered%
+		% Red
+        \definecolor{primaryLight}{HTML}{C0392B}
+        \definecolor{primary}{HTML}{96281B}
+        \definecolor{secondary}{HTML}{347986}
+        \definecolor{tertiary}{HTML}{56423e}
+    \else\ifx\beamer@mytheme@style\beamer@mytheme@styleblue%
+ 		% Blue
+		\definecolor{primaryLight}{HTML}{3a99d9}
+		\definecolor{primary}{HTML}{2e81b7}
+		\definecolor{secondary}{HTML}{2e81b7}
+		\definecolor{tertiary}{HTML}{e76d55}
+	\else\ifx\beamer@mytheme@style\beamer@mytheme@stylegray%
+ 		% Gray
+		\definecolor{primaryLight}{HTML}{616161}
+		\definecolor{primary}{HTML}{424242}
+		\definecolor{secondary}{HTML}{518071}
+		\definecolor{tertiary}{HTML}{8b7687}
+    \else% 
+    	% Asphalt by default
+      	\definecolor{primaryLight}{HTML}{34495e}
+      	\definecolor{primary}{HTML}{2d3e50}
+      	\definecolor{secondary}{HTML}{d15306}
+      	\definecolor{tertiary}{HTML}{35837b}
+    \fi\fi\fi%
+\fi%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Colors
+\setbeamercolor*{background canvas}{bg=background}
+\setbeamercolor*{footer}{fg=Gray!50}
+\setbeamercolor*{footer text}{fg=Gray}
+\setbeamercolor*{header title}{fg=primaryLight!20}
+\setbeamercolor*{header primary}{fg=white,bg=primaryLight}
+\setbeamercolor*{header secondary}{fg=white,bg=primary}
+\setbeamercolor*{secondary}{fg=secondary!10,bg=secondary}
+\setbeamercolor*{example text}{fg=tertiary}
+\setbeamercolor*{normal text}{fg=text}
+\setbeamercolor*{alerted text}{fg=secondary}
+\setbeamercolor*{itemize item}{fg=primary}
+\setbeamercolor*{itemize subitem}{fg=primary}
+\setbeamercolor*{itemize subsubitem}{fg=primary}
+\setbeamercolor*{enumerate item}{fg=primary}
+\setbeamercolor*{enumerate subitem}{fg=primary}
+\setbeamercolor*{enumerate subsubitem}{fg=primary}
+\setbeamercolor*{description item}{fg=primary}
+\setbeamercolor*{caption name}{fg=primary}
+% Default block
+\setbeamercolor{block title}{bg=primaryLight, fg=background}%
+\setbeamercolor{block body}{bg=normal text.bg!90!fg}%
+\setbeamercolor{block title alerted}{bg=secondary!80, fg=background}%
+\setbeamercolor{block body alerted}{bg=normal text.bg!90!fg}%
+\setbeamercolor{block title example}{bg=example text.fg!80, fg=background}%
+\setbeamercolor{block body example}{bg=normal text.bg!90!fg}%
+% Bibliography
+\setbeamercolor*{bibliography entry author}{fg=primary}
+\setbeamercolor*{bibliography entry title}{fg=text}
+\setbeamercolor*{bibliography entry location}{fg=text}
+\setbeamercolor*{bibliography entry note}{fg=text}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\mode<all>
