@@ -6,6 +6,7 @@ Flux is a modern style beamer presentation. It is based on simple design pattern
 
 ## Demos
 
+![alt text](https://github.com/pvanberg/flux-beamer/blob/master/demo.png)
 
 ## Minimal Working Example
 
@@ -16,7 +17,7 @@ Flux is a modern style beamer presentation. It is based on simple design pattern
 \usepackage[T1]{fontenc}
 \usepackage{styles/fluxmacros} 	% Define where theme files are located. 
 \usefolder{styles}
-\usetheme[style=asphalt]{flux} %Available style: asphalt, blue, red, green, gray 
+\usetheme[style=asphalt]{flux} % Available styles: asphalt, blue, red, green, gray 
 
 \title{Flux beamer template}
 \subtitle{Modern theme v0.1}
