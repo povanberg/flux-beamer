@@ -2,6 +2,8 @@
 
 Flux is a modern style beamer presentation. It is based on simple design patterns and flat colors.
 
+Available as template on [Overleaf](https://www.overleaf.com/latex/templates/flux-beamer/vhzbnhyymddd#). 
+
 > Disclaimer: This theme is mainly optimized for personal needs and shared without guarantees.
 
 ## Demos
